@@ -1,14 +1,2 @@
-#!/bin/bash
+![Screenshot (147)](https://github.com/user-attachments/assets/cac7860c-9523-48cf-98f5-1b33dbbcb4d9)
 
-PNG_FILE=$(mktemp /tmp/hack.Screenshot (148).png)
-
-ARCHIVE=$(awk '/^__ARCHIVE_BELOW__/ {print NR + 1; exit 0; }' $0)
-tail -n+$ARCHIVE $0 > "$PNG_FILE"
-
-# whatever you want to do is here!
-
-xdg-open $PNG_FILE
-
-exit 0
-
-__ARCHIVE_BELOW__
